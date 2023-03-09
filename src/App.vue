@@ -6,6 +6,7 @@ data:()=>{
 return{
 
   name : "ajala feranmi",
+  increamm:1,
   val:0,
   lists :[
     { 
@@ -32,10 +33,10 @@ favouritefood:"Rice"
 }},
 
 methods:{
-  
+
   increment(){
-    this.val++
-  }
+    this.val += this.increamm
+  } 
 
 
 }
@@ -59,5 +60,11 @@ methods:{
 <h1>Counter</h1>
 <h1>{{ val }}</h1>
 <button @click="increment">Increment</button>
+<label for="incremantammount"> Increment by:</label>
+<input type="number" v-model="increamm">
+
+
 </template>
+
+
 
