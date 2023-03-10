@@ -5,10 +5,10 @@ data:()=>{
 
 return{
   favouritecharacter:[
-
+  {name:"Naruto"},
   {name:"Zuko"},
   {name:"kira"},
-  {name:"Naruto"}
+  
 
   ],
 
@@ -54,8 +54,12 @@ appendlist(value){
 addtocharacterlist(){
   this.favouritecharacter.push(this.newcharacter)
   this.newcharacter={name:""}
-}
+},
 
+removefromcharacterlist(valuee){
+  console.log(valuee)
+ this.favouritecharacter.pop(valuee)
+},
 
 }
 
@@ -81,14 +85,15 @@ addtocharacterlist(){
 <label for="incremantammount"> Increment by:</label>
 <input type="number" v-model="increamm">
 
-<h1>append list</h1>
 
+<h1>append list</h1>
 <ul>
 
 <li v-for="fav in favouritecharacter">
 
 <p>{{ fav.name }}</P>
 <button @click="appendlist(fav.name)">Add</button>
+<button @click="removefromcharacterlist(fav)">Remove</button>
 
 </li>
 </ul>
