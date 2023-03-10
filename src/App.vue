@@ -1,5 +1,9 @@
 <script>
+import Counter from "./components/counter.vue"
 export default{
+  components:{
+    Counter,
+  },
 
 data:()=>{
 
@@ -13,8 +17,6 @@ return{
   newcharacter:{name:""},
   favcharlist:[],
   name : "ajala feranmi",
-  increamm:1,
-  val:0,
   lists :[
     { 
       namee:"tom",
@@ -41,10 +43,6 @@ favouritefood:"Rice"
 
 methods:{
 
-  increment(){
-    this.val += this.increamm
-  },
-
 appendlist(value){
   this.favcharlist.push(value)
 },
@@ -63,14 +61,7 @@ removefromcharacterlist(valuee){
 
 computed:{
 
-  countvall(){
-    if (this.val > 10){
-      return "counter very long"
-    } 
-    else{
-      return "counter"
-    }
-  }
+ 
 }
 
 }
@@ -89,12 +80,7 @@ computed:{
     <li>{{ list.favouritefood }}</li>
   </ul>
 
-<h1>{{countvall}}</h1>
-
-<h1>{{ val }}</h1>
-<button @click="increment">Increment</button>
-<label for="incremantammount"> Increment by:</label>
-<input type="number" v-model="increamm">
+<counter/>
 
 
 <h1>append list</h1>
