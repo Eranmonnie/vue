@@ -10,8 +10,6 @@ return{
   {name:"kira"},
 
   ],
-
-  Countert: "count",
   newcharacter:{name:""},
   favcharlist:[],
   name : "ajala feranmi",
@@ -63,15 +61,16 @@ removefromcharacterlist(valuee){
 
 },
 
-watch:{
-  val(countval){
-    if (countval > 10){
-      this.Countert+= " very long"
+computed:{
 
-
+  countvall(){
+    if (this.val > 10){
+      return "counter very long"
+    } 
+    else{
+      return "counter"
     }
   }
-
 }
 
 }
@@ -90,7 +89,7 @@ watch:{
     <li>{{ list.favouritefood }}</li>
   </ul>
 
-<h1>{{Countert}}</h1>
+<h1>{{countvall}}</h1>
 
 <h1>{{ val }}</h1>
 <button @click="increment">Increment</button>
