@@ -8,10 +8,10 @@ return{
   {name:"Naruto"},
   {name:"Zuko"},
   {name:"kira"},
-  
 
   ],
 
+  Countert: "count",
   newcharacter:{name:""},
   favcharlist:[],
   name : "ajala feranmi",
@@ -61,6 +61,17 @@ removefromcharacterlist(valuee){
  this.favouritecharacter.pop(valuee)
 },
 
+},
+
+watch:{
+  val(countval){
+    if (countval > 10){
+      this.Countert+= " very long"
+
+
+    }
+  }
+
 }
 
 }
@@ -79,7 +90,8 @@ removefromcharacterlist(valuee){
     <li>{{ list.favouritefood }}</li>
   </ul>
 
-<h1>Counter</h1>
+<h1>{{Countert}}</h1>
+
 <h1>{{ val }}</h1>
 <button @click="increment">Increment</button>
 <label for="incremantammount"> Increment by:</label>
