@@ -1,10 +1,12 @@
 <script>
 import Counter from "./components/counter.vue"
 import list from "./components/list.vue"
+import name from "./components/name.vue"
 export default{
   components:{
     Counter,
     list,
+    name,
   },
 
 data:()=>{
@@ -44,7 +46,9 @@ favouritefood:"Rice"
 }},
 
 methods:{
-
+changenameto(){
+  this.name =  "new name"
+},
 
 
 },
@@ -74,6 +78,7 @@ computed:{
 
 <list v-bind:favouritecharacter="favouritecharacter" v-bind:newcharacter="newcharacter" v-bind:favcharlist="favcharlist" />
 
+<name  :name="name" @changename="changenameto"/>
 
 </template>
 
