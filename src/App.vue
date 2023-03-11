@@ -2,11 +2,13 @@
 import Counter from "./components/counter.vue"
 import list from "./components/list.vue"
 import name from "./components/name.vue"
+import slotproject from "./components/slotproject.vue"
 export default{
   components:{
     Counter,
     list,
     name,
+    slotproject,
   },
 
 data:()=>{
@@ -79,6 +81,16 @@ computed:{
 <list v-bind:favouritecharacter="favouritecharacter" v-bind:newcharacter="newcharacter" v-bind:favcharlist="favcharlist" />
 
 <name  :name="name" @changename="changenameto"/>
+
+<slotproject>
+  <template v-slot:case>
+  hiiiii
+  </template>
+
+  <template v-slot:case2>
+  hiiiii
+  </template>
+</slotproject>
 
 </template>
 
