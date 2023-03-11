@@ -3,12 +3,14 @@ import Counter from "./components/counter.vue"
 import list from "./components/list.vue"
 import name from "./components/name.vue"
 import slotproject from "./components/slotproject.vue"
+import async from "./components/async.vue"
 export default{
   components:{
     Counter,
     list,
     name,
     slotproject,
+    async,
   },
 
 data:()=>{
@@ -92,6 +94,7 @@ computed:{
   </template>
 </slotproject>
 
+<async />
 </template>
 
 
