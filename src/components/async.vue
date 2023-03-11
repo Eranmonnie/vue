@@ -16,12 +16,18 @@ methods:{
     },
 },
 
+created(){
+
+    this.getdata()
+
+},
+
 }
 </script>
 
 <template>
 
 <h1>{{ callback }}</h1>
-<button @click="getdata"> fetch data</button>
+
 
 </template>
