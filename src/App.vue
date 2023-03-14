@@ -1,11 +1,28 @@
 <script>
 import homepage from "./components/homepage.vue"
+import aboutpage from "./components/aboutbage.vue"
 export default{
 
   components:{
     homepage,
+    aboutpage,
   },
 
+data:()=>{
+  return{
+    name:"homepage"
+  }
+},
+
+methods:{
+  changetohome(){
+    this.name = "homepage"
+  },
+  changetoabout(){
+    this.name = "aboutpage"
+  },
+
+},
 
 }
 
@@ -14,11 +31,14 @@ export default{
 <template>
   <nav class="navbar">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="#" @click="changetohome">Home</a></li>
+      <li><a href="#" @click="changetoabout">About</a></li>
     </ul>
   </nav>
-<homepage />
+
+<homepage v-if="name === 'homepage'"></homepage>
+<aboutpage v-if="name === 'aboutpage'"></aboutpage>
+
   
 </template>
 
