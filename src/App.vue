@@ -14,6 +14,12 @@ data:()=>{
   }
 },
 
+computed:{
+  displaypage(){
+    return this.name
+  }
+},
+
 methods:{
   changetohome(){
     this.name = "homepage"
@@ -36,8 +42,7 @@ methods:{
     </ul>
   </nav>
 
-<homepage v-if="name === 'homepage'"></homepage>
-<aboutpage v-if="name === 'aboutpage'"></aboutpage>
+<component :is="displaypage" />
 
   
 </template>
