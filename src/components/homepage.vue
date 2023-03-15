@@ -1,18 +1,10 @@
 <script>
+import async from "./async.vue"
+
 export default{
 
-   async setup(){
-
-    const name = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151").then((response)=>{
-    return response.json() })
-
-    return{
-        name
-    }
-},
-
-created(){
-    console.log(this.name);
+components:{
+    async,
 }
 
 }
@@ -20,6 +12,14 @@ created(){
 
 <template>
 
-<h1>{{ name }}</h1>
+<suspense>
+    
+    <async />
+
+    <template #fallback>
+        loading
+    </template>
+
+</suspense>
 
 </template>

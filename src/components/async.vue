@@ -1,25 +1,19 @@
 <script>
 export default{
-data:()=>{
-return{
+ async setup(){
 
-    callback:[1,2,3],
-
-    }
-    },
-
-methods:{
-    async getdata(){
-    this.callback = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151").then(response=>{
+    const pokea = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151").then(response=>{
         return response.json()
     })
-    },
+
+    return{
+        pokea,
+    }
 },
 
 created(){
 
-    this.getdata()
-
+    console.log (this.pokea)
 },
 
 }
@@ -27,7 +21,7 @@ created(){
 
 <template>
 
-<h1>{{ callback }}</h1>
+<h1>{{ pokea }}</h1>
 
 
 </template>
