@@ -1,10 +1,10 @@
-<script>
+<script setup>
 import async from "./async.vue"
 import {computed,ref} from "vue"
 
-export default{
 
-    setup(){
+
+  
         const name = ref("feranmi")
 
         const nameallcaps = computed(()=>{
@@ -14,27 +14,13 @@ export default{
         const  namelowcase= computed (()=>{
             return name.value.toLowerCase()
         })
-
-    return{
-        name,
-        nameallcaps,
-        namelowcase,
+        
+        const changename = ()=>{
+        name.value = "john"
     }
+    
 
-    },
-
-components:{
-    async,
-},
-
-methods:{
-
-    changename(){
-        this.name = "john"
-    }
-}
-
-}
+   
 </script>
 
 <template>
