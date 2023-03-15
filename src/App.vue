@@ -42,9 +42,16 @@ methods:{
     </ul>
   </nav>
 
-<component :is="displaypage" />
+<suspense>
 
-  
+  <component :is="displaypage" />
+
+  <template #fallback>
+    loading
+  </template>
+
+</suspense>
+
 </template>
 
 
