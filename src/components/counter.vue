@@ -1,8 +1,15 @@
 <script>
+import { newcount } from '@/composables/countstore'
 export default{
 
-data:()=>{
+  setup(){
+    return{
+      newcount,
+    }
+  },
 
+data:()=>{
+  
     return{
         increamm:1,
         val:0,
@@ -25,6 +32,7 @@ data:()=>{
 
     increment(){
     this.val += this.increamm
+    this.newcount+= 10
     }
     },
 
@@ -34,7 +42,7 @@ data:()=>{
 
 <template>
 <h1>{{countvall}}</h1>
-
+<h1>{{ newcount }}</h1>
 <h1>{{ val }}</h1>
 <button @click="increment">Increment</button>
 <label for="incremantammount"> Increment by:</label>

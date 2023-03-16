@@ -1,4 +1,5 @@
 <script setup>
+import { newcount } from "@/composables/countstore";
 import async from "./async.vue"
 import {computed,ref} from "vue"
 
@@ -24,7 +25,7 @@ import {computed,ref} from "vue"
 </script>
 
 <template>
-
+<h1>{{ newcount }}</h1>
 <h1>{{ name }}</h1>
 <button @click="changename">change name</button>
 

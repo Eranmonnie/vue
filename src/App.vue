@@ -1,11 +1,13 @@
 <script>
 import homepage from "./components/homepage.vue"
 import aboutpage from "./components/aboutbage.vue"
+import counterpage from "./components/counter.vue"
 export default{
 
   components:{
     homepage,
     aboutpage,
+    counterpage,
   },
 
 data:()=>{
@@ -27,6 +29,9 @@ methods:{
   changetoabout(){
     this.name = "aboutpage"
   },
+  changetocounter(){
+    this.name = "counterpage"
+  },
 
 },
 
@@ -39,6 +44,7 @@ methods:{
     <ul>
       <li><a href="#" @click="changetohome">Home</a></li>
       <li><a href="#" @click="changetoabout">About</a></li>
+      <li><a href="#" @click="changetocounter">Counter</a></li>
     </ul>
   </nav>
 
