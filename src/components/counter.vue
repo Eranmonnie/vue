@@ -1,10 +1,11 @@
 <script>
-import { newcount } from '@/composables/countstore'
+import {wow} from "../composables/countstore"
 export default{
 
   setup(){
+    const setwow = wow()
     return{
-      newcount,
+      setwow,
     }
   },
 
