@@ -1,5 +1,5 @@
 <script setup>
-import { newcount } from "@/composables/countstore";
+import { newcount } from "@/composables/newcount";
 import async from "./async.vue"
 import {computed,ref} from "vue"
 

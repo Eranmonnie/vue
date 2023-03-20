@@ -6,10 +6,8 @@ import{ref} from 'vue'
     globalcount+= 10
  };
 
- const decrementglobal = ()=>{
-        globalcount -= 10
- }
-
+ 
+ 
  export function wow () {
 
   const localcount = ref(100);
@@ -17,17 +15,15 @@ import{ref} from 'vue'
   const incrementlocal = ()=>{
         localcount+=100;
   };
-  const decrementlocal=()=>{
-    localcount -= 100
-  }
+
+  
 
   return{
     globalcount,
     localcount,
     incrementglobal,
     incrementlocal,
-    decrementglobal,
-    decrementlocal,
+    
 
 
   }

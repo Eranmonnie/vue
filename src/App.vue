@@ -56,7 +56,10 @@ methods:{
 </template>
 
 
-<style>
+<style scoped>
+html{
+  background-color: papayawhip;
+}
 .navbar{
   border: 1px  solid transparent;
   border-radius: 1em;
@@ -78,3 +81,4 @@ a{
   color: black;
 }
 </style>
+

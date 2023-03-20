@@ -6,7 +6,7 @@ export default{
   setup(){
 
     const setwow = wow()
-    
+
     return{
       newcount,
       setwow
@@ -53,3 +53,7 @@ data:()=>{
 <label for="incremantammount"> Increment by:</label>
 <input type="number" v-model="increamm">
 </template>
+
+<style>
+
+</style>
