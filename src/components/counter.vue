@@ -49,11 +49,17 @@ data:()=>{
 <h1>{{countvall}}</h1>
 <h1>{{ newcount }}</h1>
 <h1>{{ val }}</h1>
-<button @click="increment">Increment</button>
+
+<button @click="increment" :class="$style.button">Increment</button>
+
 <label for="incremantammount"> Increment by:</label>
 <input type="number" v-model="increamm">
 </template>
 
-<style>
+<style module >
+.button {
+  background-color: aqua;
+}
+
 
 </style>
