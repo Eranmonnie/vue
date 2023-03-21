@@ -1,1 +1,2 @@
-export const newcount = 10
+import {ref} from "vue"
+export const newcount = ref(10)
