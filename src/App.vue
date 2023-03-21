@@ -56,7 +56,7 @@ methods:{
 </template>
 
 
-<style scoped>
+<style>
 html{
   background-color: papayawhip;
 }
