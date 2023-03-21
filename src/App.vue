@@ -31,7 +31,7 @@ methods:{
     <ul>
       <li><router-link to="/">Home</router-link></li>
       <li><router-link to="/aboutpage">About</router-link></li>
-      <li><router-link>Counter</router-link></li>
+      <li><router-link to="/counter">Counter</router-link></li>
     </ul>
   </nav>
 
