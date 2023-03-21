@@ -1,13 +1,9 @@
 <script>
-import homepage from "./components/homepage.vue"
-import aboutpage from "./components/aboutbage.vue"
-import counterpage from "./components/counter.vue"
+
 export default{
 
   components:{
-    homepage,
-    aboutpage,
-    counterpage,
+   
   },
 
 data:()=>{
@@ -23,16 +19,7 @@ computed:{
 },
 
 methods:{
-  changetohome(){
-    this.name = "homepage"
-  },
-  changetoabout(){
-    this.name = "aboutpage"
-  },
-  changetocounter(){
-    this.name = "counterpage"
-  },
-
+  
 },
 
 }
@@ -42,15 +29,20 @@ methods:{
 <template>
   <nav class="navbar">
     <ul>
-      <li><a href="#" @click="changetohome">Home</a></li>
-      <li><a href="#" @click="changetoabout">About</a></li>
-      <li><a href="#" @click="changetocounter">Counter</a></li>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/aboutpage">About</router-link></li>
+      <li><router-link>Counter</router-link></li>
     </ul>
   </nav>
 
 
+  <Suspense>
 
-  <component :is="displaypage" />
+    <router-view />
+    
+  </Suspense>
+
+  
 
 
 </template>
